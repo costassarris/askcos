@@ -1,0 +1,19 @@
+        <div class="section">
+            <div class="container">
+                <header class="heading animated out" data-animation="fadeInUp" data-delay="0">
+                    <h2>Questions</h2>
+                </header>
+                <div class="row">
+                  <% @questions.each do |question| %>
+                  <a href="/questions/<%= question.id %>">
+                  
+                    <div class="col-xs-12 col-sm-6 col-md-3 align-center animated out" data-animation="fadeInUp" data-delay="0">
+                        <div class="iconic iconic-large iconic-theme-o"> <i class="icon-drop icon-3x"></i> </div>
+                        <h4><%= question.text %></h4>
+                        <p><%= question.description %></p>
+                    </div>
+                    </a>
+                  <%end%>
+                </div>
+            </div>
+        </div>

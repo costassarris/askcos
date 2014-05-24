@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Askcos</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<%= render "layouts/csscode" %>
+<%= render "layouts/header" %>
+
+<%= yield %>
+
+<%= render "layouts/footer" %>
+<%= render "layouts/jscode" %>
+

@@ -1,0 +1,24 @@
+        <div class="section">
+            <div class="container">
+                <header class="heading animated out" data-animation="fadeInUp" data-delay="0">
+                    <h2><%= @question.text %></h2>
+                </header>
+                <div class="row">
+                  
+                  <p id="notice"><%= notice %></p>
+
+  <h3><%= @question.description %></h3>
+
+<h4>Answer this question</h4>
+<% @answer = Answer.new %>
+<%= render '/answers/form' %>
+
+<h4>Answers</h4>
+
+<% @answers= Answer .where(:question_id=>@question.id) %>
+<% @answers.each do |answer| %>
+<h5><%= answer.text %></h5>
+<%end%>
+                    </div>
+                </div>
+            </div>
